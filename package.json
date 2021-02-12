@@ -1,0 +1,23 @@
+{
+  "name": "@uwu-codes/tsconfig",
+  "version": "1.0.0",
+  "description": "My TypeScript config for my projects.",
+  "main": "./tsconfig.json",
+  "files": [
+    "tsconfig.json"
+  ],
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UwUCode/tsconfig.git"
+  },
+  "author": "Donovan_DMC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UwUCode/tsconfig/issues"
+  },
+  "homepage": "https://github.com/UwUCode/tsconfig#readme",
+  "engines": {
+    "node": ">=15"
+  }
+}
