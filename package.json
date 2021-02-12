@@ -19,5 +19,9 @@
   "homepage": "https://github.com/UwUCode/tsconfig#readme",
   "engines": {
     "node": ">=15"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   }
 }
