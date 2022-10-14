@@ -1,47 +1,42 @@
 {
-	"$schema": "http://json.schemastore.org/tsconfig",
-	"compilerOptions": {
-		"outDir": "./build",
-		"allowJs": true,
-		"target": "ESNext",
-		"baseUrl": "src",
-		"resolveJsonModule": true,
-		"esModuleInterop": true,
-		"allowSyntheticDefaultImports": true,
-		"moduleResolution": "node",
-		"module": "commonjs",
-		"typeRoots": [
-			"./node_modules/@types",
-			"./src/util/@types"
-		],
-		"inlineSourceMap": true,
-		"charset": "UTF-8",
-		"downlevelIteration": true,
-		"newLine": "lf",
-		"strict": true,
-		"strictBindCallApply": true,
-		"lib": [
-			"ES2015",
-			"ES2016",
-			"ES2017",
-			"ES2018",
-			"ES2019",
-			"ES2020",
-			"ESNext"
-		],
-		"declaration": false,
-		"forceConsistentCasingInFileNames": true,
-		"noEmitOnError": true
-	},
-	"exclude": [
-		"node_modules",
-		"build",
-		"out",
-		"tmp",
-		"logs",
-		"test"
-	],
-	"include": [
-		"**/*"
-	]
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "lib": [
+      "ES2015",
+      "ES2016",
+      "ES2017",
+      "ES2018",
+      "ES2019",
+      "ES2020",
+      "ESNext"
+    ],
+    "module": "commonjs",
+    "target": "ESNext",
+    "inlineSourceMap": true,
+    "importHelpers": true,
+    "newLine": "LF",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "noUnusedLocals": true,
+    "importsNotUsedAsValues": "error",
+    "checkJs": true,
+    "strictPropertyInitialization": false,
+    "strictBindCallApply": true,
+    "resolveJsonModule": true,
+    "declaration": false,
+    "noEmitOnError": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules", "build"],
+  "ts-node": {
+    "swc": true
+  }
 }
