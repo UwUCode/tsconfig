@@ -25,7 +25,6 @@
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
     "noUnusedLocals": true,
-    "verbatimModuleSyntax": true,
     "checkJs": true,
     "strictPropertyInitialization": false,
     "strictBindCallApply": true,
