@@ -2,6 +2,12 @@
   "$schema": "http://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "lib": [
+      "ES2015",
+      "ES2016",
+      "ES2017",
+      "ES2018",
+      "ES2019",
+      "ES2020",
       "ESNext"
     ],
     "module": "ESNext",
@@ -16,8 +22,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "nodenext",
-    "moduleDetection": "force",
     "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
     "noUnusedLocals": true,
     "checkJs": true,
     "strictPropertyInitialization": false,
@@ -31,7 +37,8 @@
     "**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "build"
   ],
   "ts-node": {
     "swc": true
