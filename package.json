@@ -1,21 +1,24 @@
 {
   "name": "@uwu-codes/tsconfig",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "My TypeScript config for my projects.",
-  "main": "./tsconfig.json",
+  "main": "./esm.tsconfig.json",
   "files": [
-    "tsconfig.json",
-    "esm.json"
+    "esm.tsconfig.json",
+    "bun.tsconfig.json"
   ],
   "exports": {
     ".": {
-      "import": "./esm.json",
-      "default": "./tsconfig.json"
+      "import": "./esm.tsconfig.json",
+      "default": "./esm.tsconfig.json"
     },
-    "./esm": "./esm.json",
-    "./cjs": "./tsconfig.json"
+    "./esm": "./esm.tsconfig.json",
+    "./bun": "./bun.tsconfig.json"
   },
-  "scripts": {},
+  "scripts": {
+    "prepare:bun": "node -e \"const fs=require('fs'),d=process.cwd();fs.cpSync(d+'/package.json',d+'/package.json.bck');const pkg=JSON.parse(fs.readFileSync(d+'/package.json','utf8'));pkg.version=pkg.version+'-bun';pkg.dependencies={typescript:pkg.dependencies.typescript},fs.writeFileSync(d+'/package.json',JSON.stringify(pkg,null,2),'utf8');\"",
+    "publish:bun": "npm run prepare:bun && npm publish --tag bun --no-git-checks && mv package.json.bck package.json"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/UwUCode/tsconfig.git"
@@ -27,7 +30,7 @@
   },
   "homepage": "https://github.com/UwUCode/tsconfig#readme",
   "engines": {
-    "node": ">=15"
+    "node": ">=20"
   },
   "private": false,
   "publishConfig": {
