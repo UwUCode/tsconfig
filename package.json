@@ -20,7 +20,7 @@
     "prepare:esm": "node -e \"const fs=require('fs'),d=process.cwd();fs.cpSync(d+'/package.json',d+'/package.json.bck');const pkg=JSON.parse(fs.readFileSync(d+'/package.json','utf8'));Object.assign(pkg,{version:pkg.version+'-esm',main:'./esm.tsconfig.json',exports:{...pkg.exports,'.':{default:'./esm.tsconfig.json',import:'./esm.tsconfig.json'}}}),fs.writeFileSync(d+'/package.json',JSON.stringify(pkg,null,2),'utf8');\"",
     "publish:bun": "npm run prepare:bun && npm publish --tag bun --no-git-checks && mv package.json.bck package.json",
     "publish:esm": "npm run prepare:esm && npm publish --tag esm --no-git-checks && mv package.json.bck package.json",
-    "publish:all": "npm publish --no-git-checks && npm run publish:bun && npm run publish:esm",
+    "publish:all": "npm publish --no-git-checks && npm run publish:bun && npm run publish:esm"
   },
   "repository": {
     "type": "git",
