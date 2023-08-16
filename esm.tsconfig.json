@@ -1,33 +1,146 @@
 {
   "$schema": "http://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "lib": ["ESNext"],
-    "module": "NodeNext",
-    "target": "ESNext",
-    "inlineSourceMap": true,
-    "importHelpers": true,
-    "newLine": "LF",
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": true,
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "NodeNext",
-    "moduleDetection": "force",
+    // Type Checking
+    "allowUnreachableCode": false,
     "allowUnusedLabels": false,
+    "alwaysStrict": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
-    "checkJs": true,
-    "strictPropertyInitialization": false,
+    "noUnusedParameters": true,
+    "strict": true,
     "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true,
+
+    // Modules
+    "allowArbitraryExtensions": false,
+    "allowImportingTsExtensions": false,
+    "allowUmdGlobalAccess": true,
+    // baseUrl
+    // customConditions
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    // moduleSuffixes
+    // noResolve
+    // paths
     "resolveJsonModule": true,
+    // resolvePackageJsonExports
+    // resolvePackageJsonImports
+    // rootDir
+    // rootDirs
+    // typeRoots
+    // types
+
+    // Emit
     "declaration": false,
+    // declarationDir
+    // declarationMap
+    "downlevelIteration": true,
+    "emitBOM": false,
+    // emitDeclarationOnly
+    "importHelpers": true,
+    // importsNotUsedAsValues
+    "inlineSourceMap": true,
+    // inlineSources
+    // mapRoot
+    "newLine": "LF",
+    // noEmit
+    // noEmitHelpers
     "noEmitOnError": true,
-    "allowSyntheticDefaultImports": true
+    "outDir": "dist",
+    // outFile
+    "preserveConstEnums": false,
+    // preserveValueImports
+    // removeComments
+    // sourceMap
+    // sourceRoot
+    // stripInternal
+
+    // JavaScript Support
+    "allowJs": true,
+    "checkJs": true,
+    // maxNodeModuleJsDepth
+
+    // Editor Support
+    // disableSizeLimit
+    // plugins
+
+    // Interop Constraints
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    // isolatedModules
+    // preserveSymlinks
+    // verbatimModuleSyntax
+
+    // Backward Compatibility
+    // charset
+    // keyofStringsOnly
+    // noImplicitUseStrict
+    // noStrictGenericChecks
+    // out
+    // suppressExcessPropertyErrors
+    // suppressImplicitAnyIndexErrors
+
+    // Language and Environment
+    // emitDecoratorMetadata
+    // experimentalDecorators
+    "jsx": "preserve",
+    // jsxFactory
+    // jsxFragmentFactory
+    // jsxImportSource
+    "lib": ["ESNext"],
+    "moduleDetection": "force",
+    // noLib
+    // reactNamespace
+    "target": "esnext",
+    "useDefineForClassFields": true,
+
+    // Compiler Diagnostics
+    // diagnostics
+    // explainFiles
+    // extendedDiagnostics
+    // generateCpuProfile
+    // listEmittedFiles
+    // listFiles
+    // traceResolution
+
+    // Projects
+    // composite
+    // disableReferencedProjectLoad
+    // disableSolutionSearching
+    // disableSourceOfProjectReferenceRedirect
+    // incremental
+    // tsBuildInfoFile
+
+    // Output Formatting
+    "noErrorTruncation": true,
+    // preserveWatchOutput
+    // pretty
+
+    // Completeness
+    // skipDefaultLibCheck
+    "skipLibCheck": true
+
+    // Watch Options
+    // assumeChangesOnlyAffectDirectDependencies
   },
-  "include": ["**/*"],
-  "exclude": ["node_modules"],
   "ts-node": {
+    "transpileOnly": true,
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
     "swc": true
-  }
+  },
+  "include": ["src/**/*", "lib/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

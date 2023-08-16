@@ -1,6 +1,6 @@
 {
   "name": "@uwu-codes/tsconfig",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "My TypeScript config for my projects.",
   "main": "./esm.tsconfig.json",
   "files": [
@@ -36,12 +36,16 @@
     "node": ">=20"
   },
   "private": false,
+  "type": "module",
   "publishConfig": {
     "access": "public"
   },
+  "peerDependencies": {
+    "@swc/core": "*",
+    "@swc/helpers": "*",
+    "ts-node": "*"
+  },
   "dependencies": {
-    "@swc/core": "^1.3.41",
-    "@swc/helpers": "^0.4.14",
-    "typescript": "^5.0.2"
+    "typescript": "^5.1.6"
   }
 }
