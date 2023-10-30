@@ -1,6 +1,6 @@
 {
   "name": "@uwu-codes/tsconfig",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "My TypeScript config for my projects.",
   "main": "./esm.tsconfig.json",
   "files": [
@@ -33,14 +33,14 @@
   },
   "homepage": "https://github.com/UwUCode/tsconfig#readme",
   "engines": {
-    "node": ">=20"
+    "node": ">=18"
   },
   "private": false,
   "type": "module",
   "publishConfig": {
     "access": "public"
   },
-  "peerDependencies": {
+  "optionalDependencies": {
     "@swc/core": "*",
     "@swc/helpers": "*",
     "ts-node": "*"
