@@ -1,6 +1,6 @@
 {
   "name": "@uwu-codes/tsconfig",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "My TypeScript config for my projects.",
   "main": "./esm.tsconfig.json",
   "files": [
